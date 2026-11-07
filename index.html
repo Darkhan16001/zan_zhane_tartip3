@@ -3,42 +3,79 @@
 <html lang="kk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
   <meta name="theme-color" content="#e8f2ff">
+
   <title>Заң және тәртіп | BY DARKHAN</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div class="background" id="background"></div>
+
+  <div class="background"></div>
 
   <header class="topbar">
-    <button class="brand" onclick="showHome()">
-      <span class="logo">⚖</span>
-      <span>
+
+    <div class="brand">
+      <span class="logo">⚖️</span>
+
+      <div>
         <strong>ЗАҢ ЖӘНЕ ТӘРТІП</strong>
         <small>АШЫҚ ТӘРБИЕ САҒАТЫ</small>
-      </span>
-    </button>
-
-    <nav class="nav">
-      <button onclick="showHome()">Басты бет</button>
-      <button onclick="showSlide(0)">Сабақ</button>
-      <button onclick="showGame()">Ойын</button>
-    </nav>
-
-    <div class="timer-box">
-      <span id="phase">ТҮСІНДІРУ</span>
-      <b id="clock">15:00</b>
-      <button onclick="toggleTimer()" id="clockBtn">▶</button>
-      <button onclick="fullScreen()">⛶</button>
+      </div>
     </div>
+
+    <div class="header-controls">
+
+      <nav class="nav">
+        <button onclick="showHome()">
+          Басты бет
+        </button>
+
+        <button onclick="showSlide(0)">
+          Сабақ
+        </button>
+
+        <button onclick="showGame()">
+          Ойын
+        </button>
+      </nav>
+
+      <div class="timer-box">
+        <span id="phase">ТҮСІНДІРУ</span>
+
+        <b id="clock">15:00</b>
+
+        <button id="clockBtn"
+                onclick="toggleTimer()"
+                title="Таймер">
+          ▶
+        </button>
+
+        <button onclick="fullScreen()"
+                title="Толық экран">
+          ⛶
+        </button>
+      </div>
+
+    </div>
+
   </header>
 
   <main id="app"></main>
@@ -47,5 +84,6 @@
     <span>ҚҰҚЫҚ · ӘДІЛДІК · ТӘРТІП</span>
     <strong>BY DARKHAN</strong>
   </footer>
+  
 </body>
 </html>
