@@ -1,4 +1,9 @@
 
+/* ================================
+   BY DARKHAN
+   ЗАҢ ЖӘНЕ ТӘРТІП
+================================ */
+
 :root {
   --blue: #193b69;
   --gold: #bc8a37;
@@ -7,9 +12,13 @@
   --shadow: 0 20px 55px rgba(19,48,92,.18);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -20,36 +29,52 @@ body {
   background: #dce9f9;
 }
 
-button, a { font: inherit; }
-button { cursor: pointer; }
+button,
+a {
+  font: inherit;
+}
 
-[hidden] { display: none !important; }
+button {
+  cursor: pointer;
+}
 
-/* ТАҚЫРЫПҚА САЙ ФОН */
+[hidden] {
+  display: none !important;
+}
+
+/* ФОН */
 
 .background {
   position: fixed;
   inset: 0;
   z-index: -1;
+
   background:
-    linear-gradient(110deg,
-      rgba(234,244,255,.85),
-      rgba(211,232,255,.60)),
+    linear-gradient(
+      110deg,
+      rgba(234,244,255,.88),
+      rgba(211,232,255,.65)
+    ),
     url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=85")
-    center/cover no-repeat;
+    center / cover no-repeat;
 }
+
+/* ЖОҒАРҒЫ МӘЗІР */
 
 .topbar {
   min-height: 80px;
   position: sticky;
   top: 0;
   z-index: 20;
-  padding: 12px 3%;
-  background: rgba(255,255,255,.95);
-  border-bottom: 1px solid #cdddef;
+
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+
+  padding: 12px 3%;
+
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #cdddef;
   box-shadow: 0 4px 20px #25486b13;
 }
 
@@ -57,43 +82,68 @@ button { cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 0;
-  background: none;
-  text-align: left;
-  margin-right: auto;
   color: var(--blue);
+  flex-shrink: 0;
+}
+
+.brand strong {
+  display: block;
+  font-size: 17px;
+}
+
+.brand small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
 }
 
 .logo {
   display: grid;
   place-items: center;
+
   width: 48px;
   height: 48px;
+
   border-radius: 14px;
-  color: #ffe6a8;
   background: var(--blue);
-  font-size: 27px;
+  color: #ffe6a8;
+  font-size: 25px;
 }
 
-.brand strong { display: block; font-size: 18px; }
-.brand small { display: block; font-size: 10px; color: var(--muted); }
+/* БАРЛЫҚ ЖОҒАРҒЫ БАСҚАРУ ОҢ ЖАҚТА */
 
-.nav, .timer-box {
+.header-controls {
+  margin-left: auto;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
-  gap: 9px;
+  gap: 14px;
 }
 
-.nav button, .timer-box button {
+.nav,
+.timer-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav button,
+.timer-box button {
   border: 1px solid #d0deef;
   background: #f0f6ff;
   color: var(--blue);
+
   border-radius: 11px;
   padding: 10px 14px;
   font-weight: 800;
 }
 
-.nav button:hover, .timer-box button:hover {
+.nav button:hover,
+.timer-box button:hover {
   background: #dceaff;
 }
 
@@ -108,6 +158,8 @@ button { cursor: pointer; }
   font-variant-numeric: tabular-nums;
 }
 
+/* НЕГІЗГІ БЕТ */
+
 #app {
   max-width: 1500px;
   min-height: calc(100vh - 145px);
@@ -116,19 +168,26 @@ button { cursor: pointer; }
 }
 
 footer {
-  padding: 20px 3%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 15px;
+
+  padding: 20px 3%;
   color: #54708c;
   font-size: 12px;
 }
 
-footer strong { color: var(--gold); }
+footer strong {
+  color: var(--gold);
+}
+
+/* КАРТОЧКАЛАР */
 
 .card {
-  padding: clamp(23px,3vw,44px);
-  background: rgba(255,255,255,.96);
+  padding: clamp(23px, 3vw, 44px);
+  background: rgba(255,255,255,.97);
+
   border: 1px solid white;
   border-radius: 25px;
   box-shadow: var(--shadow);
@@ -141,30 +200,41 @@ footer strong { color: var(--gold); }
   font-weight: 800;
 }
 
-h1, h2, h3 { font-weight: 800; }
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  color: var(--blue);
+}
 
 h1 {
-  font-size: clamp(36px,4.5vw,65px);
+  font-size: clamp(34px,4.5vw,65px);
   line-height: 1.16;
-  color: var(--blue);
 }
 
 h2 {
-  font-size: clamp(25px,2.8vw,41px);
-  color: var(--blue);
+  font-size: clamp(24px,2.8vw,41px);
 }
 
-p { line-height: 1.75; }
+p {
+  line-height: 1.75;
+}
+
+/* БАТЫРМАЛАР */
 
 .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
   min-height: 50px;
   padding: 12px 22px;
+
   background: white;
   border: 1px solid #c8d8ec;
   border-radius: 13px;
+
   color: var(--blue);
   font-weight: 800;
   text-decoration: none;
@@ -177,54 +247,117 @@ p { line-height: 1.75; }
 }
 
 .btn.primary {
-  background: linear-gradient(120deg,#f6d996,#c89642);
+  background: linear-gradient(
+    120deg,
+    #f6d996,
+    #c89642
+  );
+
   color: #332715;
   border-color: #c89642;
 }
 
-.btn:disabled { opacity: .5; cursor: default; }
+.btn:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+/* БАРЛЫҚ БАТЫРМАЛАР ОҢ ЖАҚТА */
 
 .actions {
   display: flex;
   flex-wrap: wrap;
+
+  justify-content: flex-end !important;
+  align-items: center;
+
   gap: 12px;
+  width: 100%;
   margin-top: 24px;
 }
 
+.actions.row-between {
+  justify-content: flex-end !important;
+}
+
+/* АРТҚА ЖӘНЕ КЕЛЕСІ БЕТ */
+
+.slide-controls {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* YOUTUBE БАТЫРМАЛАРЫ */
+
+.video-box .actions {
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.video-box .actions a,
+.video-box .actions button {
+  min-height: 50px;
+}
+
+/* ЖОЛДАҒЫ ЭЛЕМЕНТТЕР */
+
 .row-between {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 14px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 14px;
 }
 
 .chip {
   display: inline-block;
+
+  padding: 10px 17px;
   background: #fff4db;
   color: #976c24;
+
   border-radius: 99px;
-  padding: 10px 17px;
   font-size: 13px;
   font-weight: 800;
 }
 
+/* ПРОГРЕСС */
+
 .progress {
   height: 8px;
-  border-radius: 50px;
-  background: #ffffffbb;
-  overflow: hidden;
   margin: 15px 0 24px;
+
+  background: #ffffffbb;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg,#649fd5,#d5a44c);
+
+  background: linear-gradient(
+    90deg,
+    #649fd5,
+    #d5a44c
+  );
+
   transition: width .3s;
 }
 
+/* БАСТЫ БЕТ */
+
 .hero {
   min-height: 72vh;
+
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   align-items: center;
@@ -237,14 +370,24 @@ p { line-height: 1.75; }
   letter-spacing: -3px;
 }
 
-.hero h1 span { color: #bc8a37; }
-.hero p { font-size: 22px; font-weight: 800; }
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.hero .actions {
+  justify-content: flex-end !important;
+}
 
 .hero-image {
   height: 460px;
+  border: 5px solid white;
   border-radius: 25px;
   overflow: hidden;
-  border: 5px solid white;
   box-shadow: var(--shadow);
 }
 
@@ -252,10 +395,14 @@ p { line-height: 1.75; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: zoom 20s infinite alternate ease-in-out;
+  animation: zoom 20s infinite alternate;
 }
 
-.speech-card { border-top: 6px solid var(--gold); }
+/* ТҮСІНДІРМЕ */
+
+.speech-card {
+  border-top: 6px solid var(--gold);
+}
 
 .teacher-text {
   font-size: clamp(21px,1.8vw,28px);
@@ -270,7 +417,11 @@ p { line-height: 1.75; }
   animation: blink .7s step-end infinite;
 }
 
-@keyframes blink { 50% { opacity: 0; } }
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ФОТОЛАР */
 
 .photo-grid {
   display: grid;
@@ -281,13 +432,16 @@ p { line-height: 1.75; }
 .photo-box {
   height: min(66vh,610px);
   min-width: 0;
+
   overflow: hidden;
   border-radius: 23px;
   border: 5px solid white;
-  box-shadow: var(--shadow);
+
   background: #bdd1e7;
+  box-shadow: var(--shadow);
+
   animation: enter .7s both;
-  animation-delay: calc(var(--i) * .25s);
+  animation-delay: calc(var(--i) * .2s);
 }
 
 .photo-box img {
@@ -295,26 +449,35 @@ p { line-height: 1.75; }
   height: 100%;
   display: block;
   object-fit: cover;
-  animation: zoom 18s alternate infinite ease-in-out;
+
+  animation: zoom 18s infinite alternate;
 }
 
 @keyframes zoom {
   to { transform: scale(1.08); }
 }
 
-@keyframes enter {
-  from { opacity: 0; transform: translateY(30px) scale(.96); }
-  to { opacity: 1; transform: none; }
+/* ВИДЕОЛАР */
+
+.video-box {
+  max-width: 990px;
+  margin: auto;
 }
 
-.video-box { max-width: 990px; margin: auto; }
-
 .video-frame {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
+
+  display: grid;
+  place-items: center;
+
   overflow: hidden;
   background: #173b64;
-  border-radius: 17px;
+
   border: 4px solid #d4ac5e;
+  border-radius: 17px;
+
+  color: white;
+  text-align: center;
 }
 
 .video-frame iframe {
@@ -323,15 +486,23 @@ p { line-height: 1.75; }
   border: 0;
 }
 
+.video-frame h2 {
+  color: white;
+}
+
 .note {
   padding: 18px;
+  margin: 15px 0;
+
   background: #fff6e3;
   border-left: 5px solid #d1a154;
   border-radius: 12px;
+
   font-size: 19px;
   font-weight: 800;
-  margin: 15px 0;
 }
+
+/* ОЙЫН БАПТАУ */
 
 .setup {
   max-width: 980px;
@@ -343,15 +514,19 @@ p { line-height: 1.75; }
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 15px;
-  margin: 25px 0;
+
+  max-width: 650px;
+  margin: 25px 0 25px auto;
 }
 
 .count-btn {
   padding: 24px 8px;
+
   background: #f4f8ff;
   color: var(--blue);
   border: 3px solid #d3e0f0;
   border-radius: 19px;
+
   font-size: 38px;
   font-weight: 800;
 }
@@ -370,10 +545,13 @@ p { line-height: 1.75; }
   text-align: left;
   font-size: 18px;
   line-height: 1.8;
+
   background: #f0f6ff;
   padding: 22px;
   border-radius: 16px;
 }
+
+/* КОМАНДАЛАР ТАПСЫРМАЛАРЫ */
 
 .drawing-grid,
 .result-grid {
@@ -410,40 +588,53 @@ p { line-height: 1.75; }
   letter-spacing: 1px;
 }
 
+/* ТАЙМЕР */
+
 .timer-large {
   display: inline-block;
+
   font-size: clamp(35px,5vw,72px);
   color: #b4822c;
   font-weight: 800;
+
   font-variant-numeric: tabular-nums;
 }
 
 .drawing-toolbar {
-  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  background: white;
   border: 2px solid #e4c68e;
   border-radius: 22px;
   padding: 21px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
 }
+
+/* БАҒАЛАУ ОҢ ЖАҚТА */
 
 .grade-buttons {
   display: grid;
   grid-template-columns: repeat(5,minmax(0,1fr));
   gap: 8px;
-  margin-top: 16px;
+
+  width: 100%;
+  max-width: 520px;
+  margin: 16px 0 0 auto;
 }
 
 .grade-btn {
   min-height: 48px;
   padding: 7px;
+
   border-radius: 11px;
   border: 2px solid #d4dfef;
+
   background: #edf4ff;
   color: var(--blue);
+
   font-size: 17px;
   font-weight: 800;
 }
@@ -464,35 +655,162 @@ p { line-height: 1.75; }
   color: var(--blue);
 }
 
+/* АНИМАЦИЯ */
+
 .page-enter {
   animation: enter .45s ease both;
 }
 
-@media(max-width:900px) {
-  .hero { grid-template-columns: 1fr; }
-  .nav { display: none; }
-  .drawing-grid, .result-grid { grid-template-columns: 1fr; }
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media(max-width:650px) {
-  .topbar { padding: 10px; gap: 6px; }
-  .brand strong { font-size: 12px; }
-  .brand small, .timer-box span { display: none; }
-  .logo { width: 35px; height: 35px; }
-  .timer-box b { font-size: 17px; }
-  .timer-box button { padding: 8px; }
-  #app { padding: 19px 12px; }
-  .photo-grid { grid-template-columns: 1fr; }
-  .photo-box { height: 260px; }
-  .count-picker { gap: 7px; }
-  .count-btn { font-size: 27px; padding: 16px 4px; }
-  .count-btn small { font-size: 10px; }
-  .grade-btn { font-size: 15px; }
+/* ПЛАНШЕТ */
+
+@media (max-width: 900px) {
+
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .header-controls {
+    margin-left: auto;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+
+  .drawing-grid,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media(prefers-reduced-motion:reduce) {
-  *, *::before, *::after {
+/* ТЕЛЕФОН */
+
+@media (max-width: 650px) {
+
+  .topbar {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .brand strong {
+    font-size: 12px;
+  }
+
+  .brand small {
+    font-size: 9px;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 7px;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .nav button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .timer-box span {
+    display: none;
+  }
+
+  .timer-box b {
+    font-size: 17px;
+  }
+
+  .timer-box button {
+    padding: 8px;
+  }
+
+  #app {
+    padding: 19px 12px;
+  }
+
+  .actions,
+  .slide-controls,
+  .video-box .actions {
+    justify-content: flex-end !important;
+    gap: 8px;
+  }
+
+  .btn {
+    min-height: 45px;
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 51px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-box {
+    height: 260px;
+  }
+
+  .count-picker {
+    gap: 7px;
+    max-width: 100%;
+  }
+
+  .count-btn {
+    font-size: 27px;
+    padding: 16px 4px;
+  }
+
+  .count-btn small {
+    font-size: 10px;
+  }
+
+  .grade-btn {
+    font-size: 15px;
+  }
+
+  .grade-buttons {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition: none !important;
   }
 }
+
