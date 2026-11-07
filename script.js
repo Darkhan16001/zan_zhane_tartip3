@@ -1,7 +1,14 @@
 
 "use strict";
 
+/* =====================================
+   ЗАҢ ЖӘНЕ ТӘРТІП
+   BY DARKHAN
+===================================== */
+
 const app = document.getElementById("app");
+
+/* ФОТОЛАР */
 
 const photos = [
   "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85",
@@ -12,23 +19,39 @@ const photos = [
   "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85"
 ];
 
-/* ҚЫСҚА ҚАЗАҚША БЕЙНЕРОЛИКТЕР */
+/* YOUTUBE ВИДЕОЛАРЫ */
 
 const videos = [
-  { id:"AXrvC76tF_Q", title:"Заң мен тәртіп", time:"2:10" },
-  { id:"z3UipdWdQF4", title:"Заң мен тәртіп", time:"1:03" },
-  { id:"IeZEKaWmTwA", title:"Заң мен тәртіп", time:"0:37" }
+  {
+    id: "AXrvC76tF_Q",
+    title: "Заң мен тәртіп",
+    time: "2:10"
+  },
+  {
+    id: "z3UipdWdQF4",
+    title: "Заң мен тәртіп",
+    time: "1:03"
+  },
+  {
+    id: "IeZEKaWmTwA",
+    title: "Заң мен тәртіп",
+    time: "0:37"
+  }
 ];
 
-/* ====================================
-   15 СЛАЙД
-==================================== */
+/* =====================================
+   15 ТҮСІНДІРМЕ БЕТІ
+===================================== */
 
 const slides = [
+
+  /* 1-БЕТ */
+
   {
-    type:"speech",
-    title:"Заң және тәртіп дегеніміз не?",
-    text:`Қайырлы күн, құрметті ұстаздар және студенттер!
+    type: "speech",
+    title: "Заң және тәртіп дегеніміз не?",
+
+    text: `Қайырлы күн, құрметті ұстаздар және студенттер!
 
 Бүгінгі ашық тәрбие сағатымыздың тақырыбы — «Заң және тәртіп».
 
@@ -40,22 +63,38 @@ const slides = [
 
 Бүгін біз әділдік, жауапкершілік және құқықтық мәдениет туралы сөйлесеміз.`
   },
+
+  /* 2-БЕТ */
+
   {
-    type:"gallery",
-    title:"Қоғам және жауапкершілік",
-    images:[photos[0],photos[1],photos[2]]
+    type: "gallery",
+    title: "Қоғам және жауапкершілік",
+    images: [
+      photos[0],
+      photos[1],
+      photos[2]
+    ]
   },
+
+  /* 3-БЕТ */
+
   {
-    type:"video",
-    title:"Заң мен тәртіп",
-    video:videos[0],
-    intro:"Заң мен тәртіптің қоғамдағы маңызын көрсететін қысқа роликті тамашалаймыз.",
-    outro:"Әр адамның жауапкершілігі ортақ қауіпсіздікке әсер етеді."
+    type: "video",
+    title: "Заң мен тәртіп",
+    video: videos[0],
+
+    intro: "Заң мен тәртіптің қоғамдағы маңызын көрсететін қысқа бейнероликті тамашалаймыз.",
+
+    outro: "Әр адамның жауапкершілігі ортақ қауіпсіздікке әсер етеді."
   },
+
+  /* 4-БЕТ */
+
   {
-    type:"speech",
-    title:"Азаматтың құқықтары",
-    text:`Әр адамның заңмен қорғалатын құқықтары бар.
+    type: "speech",
+    title: "Азаматтың құқықтары",
+
+    text: `Әр адамның заңмен қорғалатын құқықтары бар.
 
 Білім алу, жеке өмірін құрметтеуді талап ету және заңды мүдделерін қорғау — маңызды құқықтардың қатарына жатады.
 
@@ -65,15 +104,27 @@ const slides = [
 
 Құқықтық мәдениет өз құқығыңды білуден және басқаларды құрметтеуден басталады.`
   },
+
+  /* 5-БЕТ */
+
   {
-    type:"gallery",
-    title:"Әділдік қағидасы",
-    images:[photos[2],photos[3],photos[4]]
+    type: "gallery",
+    title: "Әділдік қағидасы",
+
+    images: [
+      photos[2],
+      photos[3],
+      photos[4]
+    ]
   },
+
+  /* 6-БЕТ */
+
   {
-    type:"speech",
-    title:"Міндет пен жауапкершілік",
-    text:`Құқықтармен бірге міндеттер де болады.
+    type: "speech",
+    title: "Міндет пен жауапкершілік",
+
+    text: `Құқықтармен бірге міндеттер де болады.
 
 Колледж студенті сабаққа қатысу, оқу орнының ішкі тәртіп ережелерін сақтау және басқа студенттерге құрметпен қарау сияқты міндеттерді орындауы керек.
 
@@ -83,15 +134,27 @@ const slides = [
 
 Жауапкершілік — қауіпсіз әрі әділ қоғам қалыптастырудың маңызды негізі.`
   },
+
+  /* 7-БЕТ */
+
   {
-    type:"gallery",
-    title:"Құқықтық мәдениет",
-    images:[photos[1],photos[4],photos[5]]
+    type: "gallery",
+    title: "Құқықтық мәдениет",
+
+    images: [
+      photos[1],
+      photos[4],
+      photos[5]
+    ]
   },
+
+  /* 8-БЕТ */
+
   {
-    type:"speech",
-    title:"Қоғамдық тәртіп",
-    text:`Қоғамдық тәртіп адамдардың қауіпсіз әрі жайлы ортада өмір сүруіне көмектеседі.
+    type: "speech",
+    title: "Қоғамдық тәртіп",
+
+    text: `Қоғамдық тәртіп адамдардың қауіпсіз әрі жайлы ортада өмір сүруіне көмектеседі.
 
 Көшеде, көлікте, колледжде және интернетте ортақ ережелерді сақтау қажет.
 
@@ -99,22 +162,39 @@ const slides = [
 
 Құқықтық мәдениеті жоғары адам ережені тек бақылаудан қорқып емес, оның маңызын түсінгендіктен сақтайды.`
   },
+
+  /* 9-БЕТ */
+
   {
-    type:"gallery",
-    title:"Қауіпсіз орта",
-    images:[photos[3],photos[0],photos[5]]
+    type: "gallery",
+    title: "Қауіпсіз орта",
+
+    images: [
+      photos[3],
+      photos[0],
+      photos[5]
+    ]
   },
+
+  /* 10-БЕТ */
+
   {
-    type:"video",
-    title:"Әділ қоғам",
-    video:videos[1],
-    intro:"Қысқа бейнеролик арқылы заңды құрметтеу мен жауапкершілік мәселесін қарастырамыз.",
-    outro:"Әділ қоғам әр азаматтың күнделікті дұрыс шешімінен басталады."
+    type: "video",
+    title: "Әділ қоғам",
+    video: videos[1],
+
+    intro: "Қысқа бейнеролик арқылы заңды құрметтеу мен жауапкершілік мәселесін қарастырамыз.",
+
+    outro: "Әділ қоғам әр азаматтың күнделікті дұрыс шешімінен басталады."
   },
+
+  /* 11-БЕТ */
+
   {
-    type:"speech",
-    title:"Интернеттегі құқық пен тәртіп",
-    text:`Қазіргі уақытта құқықтық мәдениет интернетте де маңызды.
+    type: "speech",
+    title: "Интернеттегі құқық пен тәртіп",
+
+    text: `Қазіргі уақытта құқықтық мәдениет интернетте де маңызды.
 
 Басқа адамның жеке мәліметтерін рұқсатсыз тарату, біреуді қорлау немесе жалған ақпарат тарату зиян келтіруі мүмкін.
 
@@ -124,15 +204,27 @@ const slides = [
 
 Цифрлық жауапкершілік — қазіргі азаматтың маңызды қасиеті.`
   },
+
+  /* 12-БЕТ */
+
   {
-    type:"gallery",
-    title:"Қоғамдағы өзара құрмет",
-    images:[photos[5],photos[2],photos[1]]
+    type: "gallery",
+    title: "Қоғамдағы өзара құрмет",
+
+    images: [
+      photos[5],
+      photos[2],
+      photos[1]
+    ]
   },
+
+  /* 13-БЕТ */
+
   {
-    type:"speech",
-    title:"Әділдік және адалдық",
-    text:`Әділдік — адамдарға бірдей өлшеммен қарап, шешімді нақты деректерге сүйеніп қабылдау.
+    type: "speech",
+    title: "Әділдік және адалдық",
+
+    text: `Әділдік — адамдарға бірдей өлшеммен қарап, шешімді нақты деректерге сүйеніп қабылдау.
 
 Адалдық — өз міндетін шын ниетпен орындау, өтірік айтпау және өзгенің еңбегін құрметтеу.
 
@@ -140,23 +232,37 @@ const slides = [
 
 Заңға құрмет пен адалдық қатар жүргенде қоғамдағы сенім нығаяды.`
   },
+
+  /* 14-БЕТ */
+
   {
-    type:"gallery",
-    title:"Болашақтың саналы азаматтары",
-    images:[photos[4],photos[0],photos[3]]
+    type: "gallery",
+    title: "Болашақтың саналы азаматтары",
+
+    images: [
+      photos[4],
+      photos[0],
+      photos[3]
+    ]
   },
+
+  /* 15-БЕТ */
+
   {
-    type:"video",
-    title:"Заң мен тәртіп — қорытынды",
-    video:videos[2],
-    intro:"Түсіндірме бөлімін қысқа бейнероликпен қорытындылаймыз.",
-    outro:"Енді командаларға бөлініп, заң мен тәртіп тақырыбын күрделі суреттер арқылы бейнелейміз."
+    type: "video",
+    title: "Заң мен тәртіп — қорытынды",
+    video: videos[2],
+
+    intro: "Түсіндірме бөлімін қысқа бейнероликпен қорытындылаймыз.",
+
+    outro: "Енді командаларға бөлініп, заң мен тәртіп тақырыбын күрделі суреттер арқылы бейнелейміз."
   }
+
 ];
 
-/* ====================================
-   6 КОМАНДА
-==================================== */
+/* =====================================
+   КОМАНДАЛАР
+===================================== */
 
 const teamNames = [
   "Әділдік",
@@ -167,139 +273,175 @@ const teamNames = [
   "Бірлік"
 ];
 
-/* ====================================
-   БІРІНШІ СУРЕТ:
-   6 ТҮРЛІ КҮРДЕЛІ ТАПСЫРМА
-==================================== */
+/* =====================================
+   БІРІНШІ СУРЕТ ТАПСЫРМАЛАРЫ
+===================================== */
 
 const drawingTasks = [
+
   {
-    title:"Әділ сот — шындықтың таразысы",
-    description:"Азаматтың құқығы қорғалатын сот залын күрделі композиция ретінде салыңдар.",
-    details:[
+    title: "Әділ сот — шындықтың таразысы",
+
+    description: "Азаматтың құқығы қорғалатын сот залын күрделі композиция ретінде салыңдар.",
+
+    details: [
       "Судья, екі тарап және куәгер көрінсін",
       "Істің мән-жайын көрсететін дәлел бейнеленсін",
       "Әділ шешімге келу жолы анық байқалсын",
       "Суретте әділдік таразысы және қысқа ұран болсын"
     ]
   },
+
   {
-    title:"Киберқауіпсіздік — цифрлық құқық",
-    description:"Интернетте адамның жеке мәліметін қорғауға арналған үш кезеңді постер салыңдар.",
-    details:[
+    title: "Киберқауіпсіздік — цифрлық құқық",
+
+    description: "Интернетте адамның жеке мәліметін қорғауға арналған үш кезеңді постер салыңдар.",
+
+    details: [
       "Бірінші көріністе цифрлық қауіп көрсетілсін",
       "Екінші көріністе дұрыс қорғану әрекеті болсын",
       "Үшінші көріністе мәселенің қауіпсіз шешімі бейнеленсін",
       "Қауіп пен қорғанысты әртүрлі түспен ажыратыңдар"
     ]
   },
+
   {
-    title:"Қауіпсіз қала — тәртіп картасы",
-    description:"Бір уақытта бірнеше қауіпсіздік ережесі орындалатын үлкен қала қиылысын салыңдар.",
-    details:[
+    title: "Қауіпсіз қала — тәртіп картасы",
+
+    description: "Бір уақытта бірнеше қауіпсіздік ережесі орындалатын үлкен қала қиылысын салыңдар.",
+
+    details: [
       "Жол қиылысы, бағдаршам, жаяу жүргінші жолы болсын",
       "Көлік, велосипед және жаяу жүргінші бейнеленсін",
       "Кемінде үш дұрыс қауіпсіздік әрекетін көрсетіңдер",
       "Белгілер мен қозғалыс бағыттары түсінікті болсын"
     ]
   },
+
   {
-    title:"Тұтынушы құқығы — әділ шешім",
-    description:"Дүкенде ақаулы зат сатып алған адамның құқығын қорғау жолын бейнелеңдер.",
-    details:[
+    title: "Тұтынушы құқығы — әділ шешім",
+
+    description: "Дүкенде ақаулы зат сатып алған адамның құқығын қорғау жолын бейнелеңдер.",
+
+    details: [
       "Сатушы, сатып алушы және тауар көрсетілсін",
       "Түбіртек немесе сатып алу дәлелі болсын",
       "Мәселені сыпайы түрде шешу әрекеті салынсын",
       "Оқиғаның басы, мәселесі және шешімі көрінсін"
     ]
   },
+
   {
-    title:"Жемқорлықсыз болашақ",
-    description:"Әділ қоғам мен жемқорлыққа жол бермеуді түсіндіретін мазмұнды постер құрастырыңдар.",
-    details:[
+    title: "Жемқорлықсыз болашақ",
+
+    description: "Әділ қоғам мен жемқорлыққа жол бермеуді түсіндіретін мазмұнды постер құрастырыңдар.",
+
+    details: [
       "Әділ және әділетсіз таңдау салыстырылсын",
       "Адал еңбек пен ашық бағалау бейнеленсін",
       "Қоғам сенімі көрініспен көрсетілсін",
       "Өздерің ойлап тапқан мағыналы ұран қосыңдар"
     ]
   },
+
   {
-    title:"Заңға құрмет — бір қала, бір қоғам",
-    description:"Қаладағы бірнеше қоғамдық орынды біріктіріп, адамдардың тәртіп сақтауын көрсетіңдер.",
-    details:[
+    title: "Заңға құрмет — бір қала, бір қоғам",
+
+    description: "Қаладағы бірнеше қоғамдық орынды біріктіріп, адамдардың тәртіп сақтауын көрсетіңдер.",
+
+    details: [
       "Саябақ, көше, колледж және қоғамдық көлік болсын",
       "Әр орында тәртіптің бөлек үлгісі көрсетілсін",
       "Адамдардың бір-бірін құрметтеуі байқалсын",
       "Барлық көріністі ортақ бір идея біріктірсін"
     ]
   }
+
 ];
 
-/* ====================================
-   ҚОСЫМША СУРЕТТЕР:
-   ӘР КОМАНДАҒА ТАҒЫ БІР БӨЛЕК ТАҚЫРЫП
-==================================== */
+/* =====================================
+   ҚОСЫМША ТАПСЫРМАЛАР
+===================================== */
 
 const extraTasks = [
+
   {
-    title:"Соттан тыс бейбіт келісім",
-    description:"Екі адамның келіспеушілікті өзара сыйластықпен шешуін бейнелеңдер.",
-    details:[
+    title: "Соттан тыс бейбіт келісім",
+
+    description: "Екі адамның келіспеушілікті өзара сыйластықпен шешуін бейнелеңдер.",
+
+    details: [
       "Келіспеушіліктің себебі көрінсін",
       "Екі тараптың пікірі бейнеленсін",
       "Келісімге келу жолын көрсетіңдер"
     ]
   },
+
   {
-    title:"Авторлық құқық әлемі",
-    description:"Суретші мен дизайнер еңбегінің қалай қорғалатынын көрсететін постер салыңдар.",
-    details:[
+    title: "Авторлық құқық әлемі",
+
+    description: "Суретші мен дизайнер еңбегінің қалай қорғалатынын көрсететін постер салыңдар.",
+
+    details: [
       "Туынды авторы белгіленсін",
       "Рұқсатсыз көшіру мәселесі көрсетілсін",
       "Заңды пайдалану жолы бейнеленсін"
     ]
   },
+
   {
-    title:"Мектеп маңындағы қауіпсіз қозғалыс",
-    description:"Білім беру мекемесінің маңын қауіпсіз ететін жол жоспарын салыңдар.",
-    details:[
+    title: "Мектеп маңындағы қауіпсіз қозғалыс",
+
+    description: "Білім беру мекемесінің маңын қауіпсіз ететін жол жоспарын салыңдар.",
+
+    details: [
       "Жаяу жүргіншілер бағыты болсын",
       "Көлік қозғалысы бөлек көрсетілсін",
       "Қауіпсіздік белгілері орналастырылсын"
     ]
   },
+
   {
-    title:"Құқықты қорғаудың үш қадамы",
-    description:"Өз құқығы бұзылған адамның мәселені заңды түрде шешу жолын көрсетіңдер.",
-    details:[
+    title: "Құқықты қорғаудың үш қадамы",
+
+    description: "Өз құқығы бұзылған адамның мәселені заңды түрде шешу жолын көрсетіңдер.",
+
+    details: [
       "Мәселені анықтау кезеңі болсын",
       "Дәлел жинау және көмек сұрау бейнеленсін",
       "Қорытынды шешім көрсетілсін"
     ]
   },
+
   {
-    title:"Адал конкурс",
-    description:"Байқаудағы ашық бағалау мен әділ жеңісті бейнелейтін күрделі постер салыңдар.",
-    details:[
+    title: "Адал конкурс",
+
+    description: "Байқаудағы ашық бағалау мен әділ жеңісті бейнелейтін күрделі постер салыңдар.",
+
+    details: [
       "Қатысушылар және ортақ өлшемдер болсын",
       "Бағалау үдерісі ашық көрсетілсін",
       "Еңбек нәтижесіне сай жеңімпаз анықталсын"
     ]
   },
+
   {
-    title:"Бірлік пен жауапкершілік",
-    description:"Әртүрлі маман иелері қоғам қауіпсіздігі үшін бірлесіп әрекет ететін көрініс салыңдар.",
-    details:[
+    title: "Бірлік пен жауапкершілік",
+
+    description: "Әртүрлі маман иелері қоғам қауіпсіздігі үшін бірлесіп әрекет ететін көрініс салыңдар.",
+
+    details: [
       "Кемінде төрт түрлі маман бейнеленсін",
       "Әрқайсының қоғамға пайдасы көрсетілсін",
       "Ортақ қауіпсіздік идеясы анық болсын"
     ]
   }
+
 ];
 
-/* ====================================
-   КҮЙ
-==================================== */
+/* =====================================
+   САЙТТЫҢ КҮЙІ
+===================================== */
 
 let view = "home";
 let currentSlide = 0;
@@ -312,42 +454,58 @@ let gameFinished = false;
 let extraEnabled = false;
 
 let mode = "lesson";
+
 let secondsLeft = 900;
 let running = false;
 let deadline = 0;
 
 let activeVideo = false;
+
 let typingFrame = null;
 let fullText = "";
 
 const scoreChoices = [
-  55,60,65,70,75,80,85,90,95,100
+  55, 60, 65, 70, 75,
+  80, 85, 90, 95, 100
 ];
 
-/* ====================================
+/* =====================================
    ТАЙМЕР
-==================================== */
+===================================== */
 
 function refreshClock() {
-  const m = Math.floor(secondsLeft / 60);
-  const s = secondsLeft % 60;
+  const minutes = Math.floor(secondsLeft / 60);
+  const seconds = secondsLeft % 60;
+
+  const clockText =
+    String(minutes).padStart(2, "0") +
+    ":" +
+    String(seconds).padStart(2, "0");
 
   document.getElementById("clock").textContent =
-    String(m).padStart(2,"0") + ":" +
-    String(s).padStart(2,"0");
+    clockText;
 
   document.getElementById("phase").textContent =
-    mode === "lesson" ? "ТҮСІНДІРУ" : "СУРЕТ САЛУ";
+    mode === "lesson"
+      ? "ТҮСІНДІРУ"
+      : "СУРЕТ САЛУ";
 
   document.getElementById("clockBtn").textContent =
     running ? "Ⅱ" : "▶";
+
+  const bigClock = document.getElementById("bigClock");
+
+  if (bigClock) {
+    bigClock.textContent = clockText;
+  }
 }
 
 function startClock() {
-  if (secondsLeft <= 0 || running) return;
+  if (running || secondsLeft <= 0) return;
 
   running = true;
   deadline = Date.now() + secondsLeft * 1000;
+
   refreshClock();
 }
 
@@ -360,12 +518,29 @@ function pauseClock() {
   );
 
   running = false;
+
   refreshClock();
 }
 
 function toggleTimer() {
-  if (running) pauseClock();
-  else startClock();
+  if (running) {
+    pauseClock();
+  } else {
+    startClock();
+  }
+}
+
+function switchMode(nextMode) {
+  if (mode !== nextMode) {
+    pauseClock();
+
+    mode = nextMode;
+
+    secondsLeft =
+      nextMode === "lesson" ? 900 : 600;
+  }
+
+  refreshClock();
 }
 
 setInterval(() => {
@@ -379,29 +554,21 @@ setInterval(() => {
   if (secondsLeft === 0) {
     running = false;
 
-    if (mode === "game" && gameStarted && !gameFinished) {
+    if (
+      mode === "game" &&
+      gameStarted &&
+      !gameFinished
+    ) {
       finishGame();
     }
   }
 
   refreshClock();
+}, 250);
 
-  const bigClock = document.getElementById("bigClock");
-  if (bigClock) {
-    bigClock.textContent =
-      document.getElementById("clock").textContent;
-  }
-},250);
-
-function switchMode(next) {
-  if (mode !== next) {
-    pauseClock();
-    mode = next;
-    secondsLeft = next === "lesson" ? 900 : 600;
-  }
-
-  refreshClock();
-}
+/* =====================================
+   ТОЛЫҚ ЭКРАН
+===================================== */
 
 function fullScreen() {
   if (!document.fullscreenElement) {
@@ -413,15 +580,18 @@ function fullScreen() {
   }
 }
 
-/* ====================================
-   КӨМЕКШІЛЕР
-==================================== */
+/* =====================================
+   ҚОСЫМША ФУНКЦИЯЛАР
+===================================== */
 
-function progress(n,total) {
+function progress(current, total) {
+  const percent = current / total * 100;
+
   return `
     <div class="progress">
       <div class="progress-fill"
-           style="width:${n / total * 100}%"></div>
+           style="width:${percent}%">
+      </div>
     </div>
   `;
 }
@@ -440,6 +610,7 @@ function typeText(text) {
   if (!element) return;
 
   fullText = text.trim();
+
   element.textContent = "";
   element.classList.add("typing");
 
@@ -450,10 +621,10 @@ function typeText(text) {
 
     const count = Math.min(
       fullText.length,
-      Math.floor((now - start) / 1000 * 115)
+      Math.floor((now - start) / 1000 * 180)
     );
 
-    element.textContent = fullText.slice(0,count);
+    element.textContent = fullText.slice(0, count);
 
     if (count < fullText.length) {
       typingFrame = requestAnimationFrame(frame);
@@ -461,8 +632,11 @@ function typeText(text) {
       typingFrame = null;
       element.classList.remove("typing");
 
-      const btn = document.getElementById("revealText");
-      if (btn) btn.hidden = true;
+      const button = document.getElementById("revealText");
+
+      if (button) {
+        button.hidden = true;
+      }
     }
   }
 
@@ -479,33 +653,41 @@ function revealText() {
     element.classList.remove("typing");
   }
 
-  document.getElementById("revealText").hidden = true;
+  const button = document.getElementById("revealText");
+
+  if (button) {
+    button.hidden = true;
+  }
 }
 
-function fallbackPhoto(img) {
-  const attempt = Number(img.dataset.retry || 0);
+function fallbackPhoto(image) {
+  const attempt = Number(image.dataset.retry || 0);
 
   if (attempt >= 3) {
-    img.onerror = null;
+    image.onerror = null;
     return;
   }
 
-  img.dataset.retry = attempt + 1;
-  img.src = photos[(attempt + 3) % photos.length];
+  image.dataset.retry = attempt + 1;
+  image.src = photos[(attempt + 3) % photos.length];
 }
 
-/* ====================================
+/* =====================================
    БАСТЫ БЕТ
-==================================== */
+===================================== */
 
 function showHome() {
   stopTyping();
+  pauseClock();
+
   activeVideo = false;
   view = "home";
 
   app.innerHTML = `
     <section class="hero page-enter">
+
       <div>
+
         <div class="eyebrow">
           ҚҰҚЫҚ · ӘДІЛДІК · ҚАУІПСІЗДІК
         </div>
@@ -522,171 +704,266 @@ function showHome() {
         </p>
 
         <div class="actions">
-          <button class="btn primary" onclick="showSlide(0)">
+
+          <button class="btn primary"
+                  onclick="showSlide(0)">
             Сабақты бастау →
           </button>
 
-          <button class="btn" onclick="showGame()">
+          <button class="btn"
+                  onclick="showGame()">
             Сурет салу сайысы
           </button>
+
         </div>
 
         <p>
           15 минут түсіндірме · 10 минут ойын
         </p>
+
       </div>
 
       <div class="hero-image">
-        <img src="${photos[1]}" alt="Студенттер">
+        <img src="${photos[1]}"
+             alt="Студенттер">
       </div>
+
     </section>
   `;
 
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
-/* ====================================
-   15 СЛАЙДТЫ КӨРСЕТУ
-==================================== */
+/* =====================================
+   СЛАЙДТАР
+===================================== */
 
 function showSlide(index) {
   stopTyping();
+
   switchMode("lesson");
 
-  currentSlide = Math.max(0,Math.min(14,index));
+  currentSlide = Math.max(
+    0,
+    Math.min(slides.length - 1, index)
+  );
+
   activeVideo = false;
   view = "slide";
 
-  if (!running && secondsLeft > 0) startClock();
+  if (!running && secondsLeft > 0) {
+    startClock();
+  }
 
   renderSlide();
-  window.scrollTo(0,0);
+
+  window.scrollTo(0, 0);
 }
 
+/* АРТҚА ЖӘНЕ КЕЛЕСІ БЕТ
+   ЕКЕУІ ДЕ ОҢ ЖАҚТА */
+
 function slideControls() {
+  const lastSlide =
+    currentSlide === slides.length - 1;
+
   return `
-    <div class="actions row-between">
-      <button class="btn" onclick="previousSlide()">
+    <div class="slide-controls">
+
+      <button class="btn"
+              onclick="previousSlide()">
         ← Артқа
       </button>
 
-      <button class="btn primary" onclick="nextSlide()">
-        ${currentSlide === 14
+      <button class="btn primary"
+              onclick="nextSlide()">
+
+        ${lastSlide
           ? "Ойынға өту →"
           : "Келесі бет →"}
+
       </button>
+
     </div>
   `;
 }
 
 function previousSlide() {
-  if (currentSlide === 0) showHome();
-  else showSlide(currentSlide - 1);
+  if (currentSlide === 0) {
+    showHome();
+  } else {
+    showSlide(currentSlide - 1);
+  }
 }
 
 function nextSlide() {
-  if (currentSlide === 14) showGame();
-  else showSlide(currentSlide + 1);
+  if (currentSlide === slides.length - 1) {
+    showGame();
+  } else {
+    showSlide(currentSlide + 1);
+  }
 }
 
+/* =====================================
+   СЛАЙДТЫ КӨРСЕТУ
+===================================== */
+
 function renderSlide() {
-  const s = slides[currentSlide];
+  const slide = slides[currentSlide];
 
   let content = "";
 
-  if (s.type === "speech") {
+  /* ТҮСІНДІРМЕ */
+
+  if (slide.type === "speech") {
     content = `
       <section class="card speech-card">
+
         <span class="eyebrow">
-         ТҮСІНДІРМЕ:
+          ТҮСІНДІРМЕ
         </span>
-        <h2>${s.title}</h2>
-        <div id="typedText" class="teacher-text"></div>
+
+        <h2>${slide.title}</h2>
+
+        <div id="typedText"
+             class="teacher-text">
+        </div>
 
         <div class="actions">
-          <button class="btn" id="revealText"
+
+          <button class="btn"
+                  id="revealText"
                   onclick="revealText()">
             Мәтінді толық ашу
           </button>
+
         </div>
+
       </section>
     `;
   }
 
-  if (s.type === "gallery") {
+  /* ФОТОЛАР */
+
+  if (slide.type === "gallery") {
     content = `
       <div class="photo-grid">
-        ${s.images.map((src,i) => `
-          <div class="photo-box" style="--i:${i}">
+
+        ${slide.images.map((src, index) => `
+          <div class="photo-box"
+               style="--i:${index}">
+
             <img src="${src}"
-                 alt="Сурет ${i+1}"
+                 alt="Сурет ${index + 1}"
                  loading="eager"
                  onerror="fallbackPhoto(this)">
+
           </div>
         `).join("")}
+
       </div>
     `;
   }
 
-  if (s.type === "video") {
-    const id = s.video.id;
+  /* YOUTUBE ВИДЕО */
+
+  if (slide.type === "video") {
+    const id = slide.video.id;
 
     content = `
       <section class="card video-box">
-        <div class="note">${s.intro}</div>
+
+        <div class="note">
+          ${slide.intro}
+        </div>
 
         ${activeVideo ? `
           <div class="video-frame">
+
             <iframe
               src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1"
-              title="${s.title}"
+              title="${slide.title}"
               allow="autoplay; encrypted-media; picture-in-picture"
               allowfullscreen>
             </iframe>
+
           </div>
         ` : `
-          <div class="video-frame" style="color:white;text-align:center">
+          <div class="video-frame">
+
             <div>
-              <h2 style="color:white">${s.title}</h2>
-              <p>Ұзақтығы: ${s.video.time}</p>
+              <h2>${slide.title}</h2>
+              <p>
+                Ұзақтығы: ${slide.video.time}
+              </p>
             </div>
+
           </div>
         `}
 
+        <!-- YOUTUBE БАТЫРМАЛАРЫ ОҢ ЖАҚТА -->
+
         <div class="actions">
-          <button class="btn primary" onclick="toggleVideo()">
-            ${activeVideo ? "■ Тоқтату" : "▶ Видеоны бастау"}
+
+          <button class="btn primary"
+                  onclick="toggleVideo()">
+
+            ${activeVideo
+              ? "■ Тоқтату"
+              : "▶ Видеоны бастау"}
+
           </button>
 
           <a class="btn"
              href="https://www.youtube.com/watch?v=${id}"
-             target="_blank" rel="noopener noreferrer">
-            YouTube-та ашу
+             target="_blank"
+             rel="noopener noreferrer">
+            ▶ YouTube-та ашу
           </a>
+
         </div>
 
-        <div class="note">${s.outro}</div>
+        <div class="note">
+          ${slide.outro}
+        </div>
+
       </section>
     `;
   }
 
+  /* БЕТ ҚҰРЫЛЫМЫ */
+
   app.innerHTML = `
     <div class="page-enter">
+
       <div class="row-between">
+
         <div>
-          <div class="eyebrow">ЗАҢ ЖӘНЕ ТӘРТІП</div>
-          <h1>${s.title}</h1>
+          <div class="eyebrow">
+            ЗАҢ ЖӘНЕ ТӘРТІП
+          </div>
+
+          <h1>${slide.title}</h1>
         </div>
-        <span class="chip">${currentSlide+1} / 15</span>
+
+        <span class="chip">
+          ${currentSlide + 1} / ${slides.length}
+        </span>
+
       </div>
 
-      ${progress(currentSlide+1,15)}
+      ${progress(currentSlide + 1, slides.length)}
+
       ${content}
+
       ${slideControls()}
+
     </div>
   `;
 
-  if (s.type === "speech") typeText(s.text);
+  if (slide.type === "speech") {
+    typeText(slide.text);
+  }
 }
 
 function toggleVideo() {
@@ -694,13 +971,15 @@ function toggleVideo() {
   renderSlide();
 }
 
-/* ====================================
-   ОЙЫНДЫҢ БАПТАУ БЕТІ
-==================================== */
+/* =====================================
+   ОЙЫН БЕТІ
+===================================== */
 
 function showGame() {
   stopTyping();
+
   activeVideo = false;
+
   switchMode("game");
 
   if (gameFinished) {
@@ -717,6 +996,10 @@ function showGame() {
   renderSetup();
 }
 
+/* =====================================
+   КОМАНДА САНЫН ТАҢДАУ
+===================================== */
+
 function renderSetup() {
   app.innerHTML = `
     <section class="card setup page-enter">
@@ -730,62 +1013,83 @@ function renderSetup() {
       <h2>Қанша команда қатысады?</h2>
 
       <div class="count-picker">
-        ${[3,4,5,6].map(n => `
-          <button class="count-btn
-            ${teamCount === n ? "selected" : ""}"
+
+        ${[3, 4, 5, 6].map(n => `
+          <button
+            class="count-btn ${teamCount === n ? "selected" : ""}"
             onclick="selectCount(${n})">
 
             ${n}
+
             <small>КОМАНДА</small>
+
           </button>
         `).join("")}
+
       </div>
 
       <div class="rules">
+
         <strong>Ойын ережесі:</strong>
+
         <p>
           • Әр командаға бір-біріне ұқсамайтын
           күрделі сурет тапсырмасы беріледі.
         </p>
+
         <p>
           • Суреттер қағазға салынады.
           Барлық команда бір уақытта бастайды.
         </p>
+
         <p>
           • Барлық командаға ортақ уақыт —
           10 минут.
         </p>
+
         <p>
-          • Ерте аяқталса, апай ойынды
-          аяқтайды немесе қосымша тапсырма береді.
+          • Командалар ерте аяқтаса,
+          жүргізуші ойынды аяқтай алады
+          немесе қосымша тапсырма береді.
         </p>
+
         <p>
-          • Апай жұмыстарды 55–100
-          аралығында бағалайды.
+          • Әр команданың жұмысы
+          55–100 ұпай аралығында бағаланады.
         </p>
+
       </div>
 
-      <div class="actions" style="justify-content:center">
-        <button class="btn primary" onclick="beginDrawing()">
-          ${teamCount} тапсырманы ашу және бастау →
+      <div class="actions">
+
+        <button class="btn primary"
+                onclick="beginDrawing()">
+
+          ${teamCount} тапсырманы ашу
+          және бастау →
+
         </button>
+
       </div>
 
     </section>
   `;
+
+  window.scrollTo(0, 0);
 }
 
-function selectCount(n) {
-  if (![3,4,5,6].includes(n)) return;
+function selectCount(number) {
+  if (![3, 4, 5, 6].includes(number)) return;
 
-  teamCount = n;
+  teamCount = number;
   scores = Array(6).fill(null);
+
   renderSetup();
 }
 
-/* ====================================
-   10 МИНУТТЫҚ СУРЕТ САЛУ
-==================================== */
+/* =====================================
+   ОЙЫНДЫ БАСТАУ
+===================================== */
 
 function beginDrawing() {
   gameStarted = true;
@@ -802,6 +1106,10 @@ function beginDrawing() {
   renderDrawing();
 }
 
+/* =====================================
+   ӘР КОМАНДАҒА ТАПСЫРМА
+===================================== */
+
 function renderTaskCard(task, index, isExtra) {
   return `
     <section class="card task-card">
@@ -812,12 +1120,14 @@ function renderTaskCard(task, index, isExtra) {
 
       <h2>${task.title}</h2>
 
-      <p><strong>${task.description}</strong></p>
+      <p>
+        <strong>${task.description}</strong>
+      </p>
 
       <ul>
-        ${task.details.map(detail =>
-          `<li>${detail}</li>`
-        ).join("")}
+        ${task.details.map(detail => `
+          <li>${detail}</li>
+        `).join("")}
       </ul>
 
       <span class="chip">
@@ -825,9 +1135,14 @@ function renderTaskCard(task, index, isExtra) {
           ? "ЕКІНШІ СУРЕТ"
           : "БІРІНШІ СУРЕТ"}
       </span>
+
     </section>
   `;
 }
+
+/* =====================================
+   СУРЕТ САЛУ САЙЫСЫ
+===================================== */
 
 function renderDrawing() {
   view = "drawing";
@@ -840,7 +1155,9 @@ function renderDrawing() {
     <div class="page-enter">
 
       <div class="row-between">
+
         <div>
+
           <div class="eyebrow">
             ${teamCount} КОМАНДА ·
             ${teamCount} БӨЛЕК ТАПСЫРМА
@@ -851,42 +1168,59 @@ function renderDrawing() {
               ? "Қосымша сурет салу"
               : "Күрделі сурет салу сайысы"}
           </h1>
+
         </div>
 
         <span class="chip">
-          ${extraEnabled ? "2-КЕЗЕҢ" : "1-КЕЗЕҢ"}
+          ${extraEnabled
+            ? "2-КЕЗЕҢ"
+            : "1-КЕЗЕҢ"}
         </span>
+
       </div>
 
       <div class="drawing-toolbar">
 
         <div>
-          <div class="eyebrow">ҚАЛҒАН УАҚЫТ</div>
-          <span class="timer-large" id="bigClock">
+
+          <div class="eyebrow">
+            ҚАЛҒАН УАҚЫТ
+          </div>
+
+          <span class="timer-large"
+                id="bigClock">
+
             ${document.getElementById("clock").textContent}
+
           </span>
+
         </div>
 
         <div>
+
           <strong>
-            Барлық команда бір уақытта сурет салады.
+            Барлық команда бір уақытта
+            сурет салады.
           </strong>
 
           <p>
             Уақыт бітсе, бағалауға өтеміз.
           </p>
+
         </div>
+
       </div>
 
       <div class="drawing-grid">
 
-        ${tasks.slice(0,teamCount).map((task,i) =>
-          renderTaskCard(task,i,extraEnabled)
+        ${tasks.slice(0, teamCount).map((task, index) =>
+          renderTaskCard(task, index, extraEnabled)
         ).join("")}
 
       </div>
 
-      <div class="card" style="margin-top:23px">
+      <section class="card"
+               style="margin-top:23px">
 
         <h2>
           ${extraEnabled
@@ -895,8 +1229,9 @@ function renderDrawing() {
         </h2>
 
         <p>
-          Егер топтар ерте бітірсе,
-          апай келесі әрекетті таңдайды.
+          Егер командалар тапсырманы ерте
+          орындаса, келесі әрекетті таңдауға болады.
+
           Қосымша кезеңде уақыт қайта басталмайды.
         </p>
 
@@ -915,15 +1250,18 @@ function renderDrawing() {
           ` : ""}
 
         </div>
-      </div>
+
+      </section>
 
     </div>
   `;
 
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
-/* ЕКІНШІ СУРЕТТІ БАСТАУ */
+/* =====================================
+   ҚОСЫМША КЕЗЕҢ
+===================================== */
 
 function startExtra() {
   if (gameFinished || secondsLeft <= 0) return;
@@ -932,47 +1270,61 @@ function startExtra() {
   renderDrawing();
 }
 
-/* ====================================
-   АЯҚТАУ ЖӘНЕ БАҒАЛАУ
-==================================== */
+/* =====================================
+   ОЙЫНДЫ АЯҚТАУ
+===================================== */
 
 function finishGame() {
   if (gameFinished) return;
 
   pauseClock();
+
   gameFinished = true;
 
   showResults();
 }
 
+/* =====================================
+   БАҒАЛАУ
+===================================== */
+
 function showResults() {
   view = "results";
+
   running = false;
   refreshClock();
 
   renderResults();
+
+  window.scrollTo(0, 0);
 }
 
 function renderResults() {
-  const activeScores = scores.slice(0,teamCount);
-  const graded = activeScores.filter(n => n !== null);
-  const allGraded = graded.length === teamCount;
+  const activeScores = scores.slice(0, teamCount);
+
+  const graded = activeScores.filter(
+    score => score !== null
+  );
+
+  const allGraded =
+    graded.length === teamCount;
 
   const maxScore = graded.length
     ? Math.max(...graded)
     : null;
 
   const winners = teamNames
-    .slice(0,teamCount)
-    .filter((name,i) =>
-      scores[i] !== null &&
-      scores[i] === maxScore
+    .slice(0, teamCount)
+    .filter((name, index) =>
+      scores[index] !== null &&
+      scores[index] === maxScore
     );
 
   app.innerHTML = `
     <div class="page-enter">
 
-      <section class="card" style="text-align:center">
+      <section class="card"
+               style="text-align:center">
 
         <div class="eyebrow">
           ЗАҢ ЖӘНЕ ТӘРТІП · ҚОРЫТЫНДЫ
@@ -983,51 +1335,52 @@ function renderResults() {
         </h1>
 
         <p style="font-size:20px">
-          Апай әр команданың суретін
-          бағалайды.
+          Әр команданың жұмысын
+          бағалаңыз.
         </p>
 
         <span class="chip">
           ${graded.length} / ${teamCount}
           команда бағаланды
         </span>
+
       </section>
 
       <div class="result-grid">
 
-        ${teamNames.slice(0,teamCount).map((name,i) => `
+        ${teamNames.slice(0, teamCount).map((name, index) => `
+
           <section class="card">
 
             <div class="eyebrow">
-              ${i + 1}-КОМАНДА
+              ${index + 1}-КОМАНДА
             </div>
 
             <h2>${name}</h2>
 
             <p>
-              ${drawingTasks[i].title}
+              ${drawingTasks[index].title}
             </p>
 
             ${extraEnabled ? `
               <p>
                 Қосымша:
-                ${extraTasks[i].title}
+                ${extraTasks[index].title}
               </p>
             ` : ""}
 
             <div class="result-score">
-              ${scores[i] === null
+              ${scores[index] === null
                 ? "—"
-                : scores[i]}
+                : scores[index]}
             </div>
 
             <div class="grade-buttons">
 
               ${scoreChoices.map(value => `
                 <button
-                  class="grade-btn
-                    ${scores[i] === value ? "selected" : ""}"
-                  onclick="gradeTeam(${i},${value})">
+                  class="grade-btn ${scores[index] === value ? "selected" : ""}"
+                  onclick="gradeTeam(${index},${value})">
 
                   ${value}
 
@@ -1035,14 +1388,18 @@ function renderResults() {
               `).join("")}
 
             </div>
+
           </section>
+
         `).join("")}
 
       </div>
 
-      <section class="card" style="margin-top:24px;text-align:center">
+      <section class="card"
+               style="margin-top:24px;text-align:center">
 
         ${allGraded ? `
+
           <h2>
             Үздік нәтиже:
             ${winners.join(", ")}
@@ -1052,12 +1409,16 @@ function renderResults() {
             Барлық командаларға белсенді
             қатысқандары үшін рақмет!
           </p>
+
         ` : `
+
           <h2>Бағалау жалғасуда</h2>
+
           <p>
             Әр командаға ұпай қойылған соң
             қорытынды нәтиже шығады.
           </p>
+
         `}
 
         <h1 class="goodbye">
@@ -1069,7 +1430,7 @@ function renderResults() {
           тәртіпті сақтайық!
         </p>
 
-        <div class="actions" style="justify-content:center">
+        <div class="actions">
 
           <button class="btn primary"
                   onclick="showHome()">
@@ -1086,54 +1447,85 @@ function renderResults() {
         <h3 style="color:#b68635;margin-top:30px">
           BY DARKHAN
         </h3>
+
       </section>
 
     </div>
   `;
-
-  window.scrollTo(0,0);
 }
 
-function gradeTeam(index,value) {
+/* =====================================
+   ҰПАЙ БЕРУ
+===================================== */
+
+function gradeTeam(index, value) {
   if (index < 0 || index >= teamCount) return;
+
   if (!scoreChoices.includes(value)) return;
 
+  const oldScroll = window.scrollY;
+
   scores[index] = value;
+
   renderResults();
+
+  window.scrollTo(0, oldScroll);
 }
 
+/* =====================================
+   ОЙЫНДЫ ҚАЙТА БАСТАУ
+===================================== */
+
 function restartGame() {
-  if (!confirm("Ойынды жаңадан бастаймыз ба?")) {
-    return;
-  }
+  const answer = confirm(
+    "Ойынды жаңадан бастаймыз ба?"
+  );
+
+  if (!answer) return;
 
   running = false;
+
   gameStarted = false;
   gameFinished = false;
   extraEnabled = false;
+
   scores = Array(6).fill(null);
 
   mode = "game";
   secondsLeft = 600;
+
   refreshClock();
 
   view = "setup";
+
   renderSetup();
 }
 
-/* БАСҚАРУ */
+/* =====================================
+   ПЕРНЕТАҚТАМЕН БАСҚАРУ
+===================================== */
 
-document.addEventListener("keydown",event => {
-  if (event.key === "ArrowRight" && view === "slide") {
+document.addEventListener("keydown", event => {
+
+  if (
+    event.key === "ArrowRight" &&
+    view === "slide"
+  ) {
     nextSlide();
   }
 
-  if (event.key === "ArrowLeft" && view === "slide") {
+  if (
+    event.key === "ArrowLeft" &&
+    view === "slide"
+  ) {
     previousSlide();
   }
+
 });
 
-/* ІСКЕ ҚОСУ */
+/* =====================================
+   САЙТТЫ ІСКЕ ҚОСУ
+===================================== */
 
 refreshClock();
 showHome();
