@@ -1,15 +1,11 @@
-
-/* ================================
-   BY DARKHAN
-   ЗАҢ ЖӘНЕ ТӘРТІП
-================================ */
-
+һ
 :root {
-  --blue: #193b69;
-  --gold: #bc8a37;
-  --ink: #1b3556;
-  --muted: #59738e;
-  --shadow: 0 20px 55px rgba(19,48,92,.18);
+  --green: #137e59;
+  --deep: #103e35;
+  --text: #173e35;
+  --muted: #60796e;
+  --border: #d3e8db;
+  --shadow: 0 18px 50px rgba(18,75,44,.10);
 }
 
 * {
@@ -24,647 +20,127 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: Manrope, Arial, sans-serif;
-  font-weight: 700;
-  color: var(--ink);
-  background: #dce9f9;
+  color: var(--text);
+  background: #f3fbf5;
 }
 
-button,
-a {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-/* ФОН */
-
-.background {
+.page-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
+  pointer-events: none;
 
   background:
-    linear-gradient(
-      110deg,
-      rgba(234,244,255,.88),
-      rgba(211,232,255,.65)
+    radial-gradient(
+      circle at 12% 18%,
+      #d7f3e2,
+      transparent 40%
     ),
-    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=85")
-    center / cover no-repeat;
+    radial-gradient(
+      circle at 90% 12%,
+      #e6f3cf,
+      transparent 35%
+    ),
+    linear-gradient(145deg,#f7fff7,#eaf5ef);
 }
 
-/* ЖОҒАРҒЫ МӘЗІР */
+/* ЖОҒАРҒЫ БӨЛІМ */
 
-.topbar {
-  min-height: 80px;
-  position: sticky;
-  top: 0;
-  z-index: 20;
-
+.header {
+  min-height: 78px;
+  padding: 14px 5%;
   display: flex;
   align-items: center;
-  gap: 15px;
-
-  padding: 12px 3%;
-
-  background: rgba(255,255,255,.97);
-  border-bottom: 1px solid #cdddef;
-  box-shadow: 0 4px 20px #25486b13;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(255,255,255,.92);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(15px);
 }
 
 .brand {
   display: flex;
+  gap: 13px;
   align-items: center;
-  gap: 12px;
-  color: var(--blue);
-  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 37px;
 }
 
 .brand strong {
   display: block;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .brand small {
   display: block;
-  font-size: 10px;
+  margin-top: 4px;
   color: var(--muted);
-}
-
-.logo {
-  display: grid;
-  place-items: center;
-
-  width: 48px;
-  height: 48px;
-
-  border-radius: 14px;
-  background: var(--blue);
-  color: #ffe6a8;
-  font-size: 25px;
-}
-
-/* БАРЛЫҚ ЖОҒАРҒЫ БАСҚАРУ ОҢ ЖАҚТА */
-
-.header-controls {
-  margin-left: auto;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 14px;
-}
-
-.nav,
-.timer-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 8px;
-}
-
-.nav button,
-.timer-box button {
-  border: 1px solid #d0deef;
-  background: #f0f6ff;
-  color: var(--blue);
-
-  border-radius: 11px;
-  padding: 10px 14px;
-  font-weight: 800;
-}
-
-.nav button:hover,
-.timer-box button:hover {
-  background: #dceaff;
-}
-
-.timer-box span {
   font-size: 11px;
-  color: var(--muted);
+  font-weight: 800;
 }
 
-.timer-box b {
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#phaseLabel {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#clock {
   font-size: 23px;
-  color: var(--gold);
+  font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
 
-/* НЕГІЗГІ БЕТ */
-
-#app {
-  max-width: 1500px;
-  min-height: calc(100vh - 145px);
-  margin: auto;
-  padding: 30px 25px 45px;
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: .2s ease;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-
-  padding: 20px 3%;
-  color: #54708c;
-  font-size: 12px;
+button:hover:not(:disabled) {
+  filter: brightness(.95);
 }
 
-footer strong {
-  color: var(--gold);
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
 }
 
-/* КАРТОЧКАЛАР */
-
-.card {
-  padding: clamp(23px, 3vw, 44px);
-  background: rgba(255,255,255,.97);
-
-  border: 1px solid white;
-  border-radius: 25px;
-  box-shadow: var(--shadow);
-}
-
-.eyebrow {
-  color: #a1752b;
-  letter-spacing: 2px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 800;
-  color: var(--blue);
-}
-
-h1 {
-  font-size: clamp(34px,4.5vw,65px);
-  line-height: 1.16;
-}
-
-h2 {
-  font-size: clamp(24px,2.8vw,41px);
-}
-
-p {
-  line-height: 1.75;
-}
-
-/* БАТЫРМАЛАР */
-
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  min-height: 50px;
-  padding: 12px 22px;
-
-  background: white;
-  border: 1px solid #c8d8ec;
-  border-radius: 13px;
-
-  color: var(--blue);
-  font-weight: 800;
-  text-decoration: none;
-  transition: .2s;
-}
-
-.btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  background: #e8f2ff;
-}
-
-.btn.primary {
-  background: linear-gradient(
-    120deg,
-    #f6d996,
-    #c89642
-  );
-
-  color: #332715;
-  border-color: #c89642;
-}
-
-.btn:disabled {
-  opacity: .5;
-  cursor: default;
-}
-
-/* БАРЛЫҚ БАТЫРМАЛАР ОҢ ЖАҚТА */
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: flex-end !important;
-  align-items: center;
-
-  gap: 12px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-.actions.row-between {
-  justify-content: flex-end !important;
-}
-
-/* АРТҚА ЖӘНЕ КЕЛЕСІ БЕТ */
-
-.slide-controls {
-  display: flex;
-  justify-content: flex-end !important;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-
-  width: 100%;
-  margin-top: 25px;
-}
-
-/* YOUTUBE БАТЫРМАЛАРЫ */
-
-.video-box .actions {
-  display: flex;
-  justify-content: flex-end !important;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.video-box .actions a,
-.video-box .actions button {
-  min-height: 50px;
-}
-
-/* ЖОЛДАҒЫ ЭЛЕМЕНТТЕР */
-
-.row-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.chip {
-  display: inline-block;
-
-  padding: 10px 17px;
-  background: #fff4db;
-  color: #976c24;
-
-  border-radius: 99px;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-/* ПРОГРЕСС */
-
-.progress {
-  height: 8px;
-  margin: 15px 0 24px;
-
-  background: #ffffffbb;
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-
-  background: linear-gradient(
-    90deg,
-    #649fd5,
-    #d5a44c
-  );
-
-  transition: width .3s;
-}
-
-/* БАСТЫ БЕТ */
-
-.hero {
-  min-height: 72vh;
-
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  align-items: center;
-  gap: 35px;
-}
-
-.hero h1 {
-  font-size: clamp(55px,7vw,105px);
-  line-height: 1.05;
-  letter-spacing: -3px;
-}
-
-.hero h1 span {
-  color: var(--gold);
-}
-
-.hero p {
-  font-size: 21px;
-  font-weight: 800;
-}
-
-.hero .actions {
-  justify-content: flex-end !important;
-}
-
-.hero-image {
-  height: 460px;
-  border: 5px solid white;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: zoom 20s infinite alternate;
-}
-
-/* ТҮСІНДІРМЕ */
-
-.speech-card {
-  border-top: 6px solid var(--gold);
-}
-
-.teacher-text {
-  font-size: clamp(21px,1.8vw,28px);
-  font-weight: 800;
-  line-height: 1.85;
-  white-space: pre-line;
-}
-
-.typing::after {
-  content: "▌";
-  color: var(--gold);
-  animation: blink .7s step-end infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* ФОТОЛАР */
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 17px;
-}
-
-.photo-box {
-  height: min(66vh,610px);
-  min-width: 0;
-
-  overflow: hidden;
-  border-radius: 23px;
-  border: 5px solid white;
-
-  background: #bdd1e7;
-  box-shadow: var(--shadow);
-
-  animation: enter .7s both;
-  animation-delay: calc(var(--i) * .2s);
-}
-
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-
-  animation: zoom 18s infinite alternate;
-}
-
-@keyframes zoom {
-  to { transform: scale(1.08); }
-}
-
-/* ВИДЕОЛАР */
-
-.video-box {
-  max-width: 990px;
-  margin: auto;
-}
-
-.video-frame {
-  aspect-ratio: 16 / 9;
-
-  display: grid;
-  place-items: center;
-
-  overflow: hidden;
-  background: #173b64;
-
-  border: 4px solid #d4ac5e;
-  border-radius: 17px;
-
-  color: white;
-  text-align: center;
-}
-
-.video-frame iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.video-frame h2 {
-  color: white;
-}
-
-.note {
-  padding: 18px;
-  margin: 15px 0;
-
-  background: #fff6e3;
-  border-left: 5px solid #d1a154;
+.timer-button {
+  padding: 10px 14px;
+  background: #e5f5ea;
+  border: 1px solid var(--border);
   border-radius: 12px;
-
-  font-size: 19px;
-  font-weight: 800;
+  color: var(--deep);
+  font-size: 17px;
 }
 
-/* ОЙЫН БАПТАУ */
+/* НЕГІЗГІ БӨЛІМ */
 
-.setup {
-  max-width: 980px;
+main {
+  max-width: 1300px;
+  min-height: 70vh;
   margin: auto;
-  text-align: center;
+  padding: 46px 112px 100px 5%;
 }
-
-.count-picker {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 15px;
-
-  max-width: 650px;
-  margin: 25px 0 25px auto;
-}
-
-.count-btn {
-  padding: 24px 8px;
-
-  background: #f4f8ff;
-  color: var(--blue);
-  border: 3px solid #d3e0f0;
-  border-radius: 19px;
-
-  font-size: 38px;
-  font-weight: 800;
-}
-
-.count-btn small {
-  display: block;
-  font-size: 13px;
-}
-
-.count-btn.selected {
-  background: #fff1d2;
-  border-color: var(--gold);
-}
-
-.rules {
-  text-align: left;
-  font-size: 18px;
-  line-height: 1.8;
-
-  background: #f0f6ff;
-  padding: 22px;
-  border-radius: 16px;
-}
-
-/* КОМАНДАЛАР ТАПСЫРМАЛАРЫ */
-
-.drawing-grid,
-.result-grid {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 17px;
-  margin-top: 20px;
-}
-
-.task-card {
-  padding: 24px;
-  border-top: 6px solid #d0a14e;
-}
-
-.task-card h2 {
-  font-size: 26px;
-  margin: 10px 0;
-}
-
-.task-card p {
-  font-size: 17px;
-  line-height: 1.65;
-}
-
-.task-card ul {
-  padding-left: 24px;
-  line-height: 1.7;
-}
-
-.team-name {
-  color: #a57624;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-/* ТАЙМЕР */
-
-.timer-large {
-  display: inline-block;
-
-  font-size: clamp(35px,5vw,72px);
-  color: #b4822c;
-  font-weight: 800;
-
-  font-variant-numeric: tabular-nums;
-}
-
-.drawing-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-
-  background: white;
-  border: 2px solid #e4c68e;
-  border-radius: 22px;
-  padding: 21px 25px;
-}
-
-/* БАҒАЛАУ ОҢ ЖАҚТА */
-
-.grade-buttons {
-  display: grid;
-  grid-template-columns: repeat(5,minmax(0,1fr));
-  gap: 8px;
-
-  width: 100%;
-  max-width: 520px;
-  margin: 16px 0 0 auto;
-}
-
-.grade-btn {
-  min-height: 48px;
-  padding: 7px;
-
-  border-radius: 11px;
-  border: 2px solid #d4dfef;
-
-  background: #edf4ff;
-  color: var(--blue);
-
-  font-size: 17px;
-  font-weight: 800;
-}
-
-.grade-btn.selected {
-  border-color: #b48835;
-  background: #f4d38e;
-  color: #382912;
-}
-
-.result-score {
-  font-size: 39px;
-  color: #b18130;
-}
-
-.goodbye {
-  font-size: clamp(35px,5vw,77px);
-  color: var(--blue);
-}
-
-/* АНИМАЦИЯ */
 
 .page-enter {
-  animation: enter .45s ease both;
+  animation: enter .35s ease both;
 }
 
 @keyframes enter {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
 
   to {
@@ -673,16 +149,405 @@ p {
   }
 }
 
-/* ПЛАНШЕТ */
+/* ОҢ ЖАҚ БАТЫРМАЛАР */
 
-@media (max-width: 900px) {
+.right-panel {
+  position: fixed;
+  z-index: 20;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  .topbar {
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 
-  .header-controls {
-    margin-left: auto;
+  background: rgba(255,255,255,.96);
+  border: 1px solid var(--border);
+  border-radius: 23px;
+  box-shadow: var(--shadow);
+}
+
+.rail-button {
+  width: 64px;
+  min-height: 62px;
+  border: 0;
+  border-radius: 15px;
+  background: #f0faf4;
+  color: var(--deep);
+}
+
+.rail-button span {
+  display: block;
+  font-size: 27px;
+}
+
+.rail-button small {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.rail-button.primary {
+  color: white;
+  background: var(--green);
+}
+
+/* БАСТЫ БЕТ */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 9px 15px;
+  background: #d9f2e2;
+  border-radius: 30px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  margin: 24px 0;
+  font-size: clamp(42px,5.7vw,75px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.hero-image {
+  position: relative;
+  min-height: 460px;
+  background: #9acbb6;
+  border-radius: 34px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px #154c2e30;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.hero-quote {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 23px;
+  border-radius: 20px;
+  background: rgba(7,42,33,.7);
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* САБАҚ МАҚСАТЫ */
+
+.lesson-goal {
+  margin: 24px 0;
+  padding: 23px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--green);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.lesson-goal h2 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  color: var(--green);
+}
+
+.lesson-goal p,
+.lesson-goal li {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.lesson-goal li {
+  margin: 9px 0;
+}
+
+/* БАТЫРМАЛАР */
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: white;
+  color: var(--deep);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn.primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.btn.danger {
+  background: #d94848;
+  border-color: #d94848;
+  color: white;
+}
+
+/* САНДАР */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.stats > div {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 18px 10px;
+  text-align: center;
+}
+
+.stats b {
+  display: block;
+  color: var(--green);
+  font-size: 28px;
+}
+
+.stats small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* ТҮСІНДІРМЕЛЕР */
+
+.section-title {
+  margin: 15px 0 25px;
+  font-size: clamp(30px,4vw,51px);
+  line-height: 1.2;
+}
+
+.card {
+  margin: 20px 0;
+  padding: 28px;
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 25px;
+  color: var(--green);
+}
+
+.card p,
+.card li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.slide-image {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.progress {
+  height: 9px;
+  width: 100%;
+  margin: 20px 0 25px;
+  overflow: hidden;
+  background: #daeee2;
+  border-radius: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg,#39b985,#138554);
+}
+
+.video-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #0f2e23;
+  border: 0;
+  border-radius: 19px;
+}
+
+.answer-box {
+  margin-top: 18px;
+  padding: 21px;
+  background: #e3f7e9;
+  border: 1px solid #b5e5c4;
+  border-radius: 17px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.answer-box strong {
+  color: var(--green);
+}
+
+/* ОЙЫН */
+
+.random-team {
+  margin: 20px 0;
+  padding: 28px;
+  border: 2px solid #9cddb2;
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(135deg,#e0f8e8,#d3f1de);
+}
+
+.random-team small {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.random-team strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--green);
+  font-size: clamp(26px,4vw,46px);
+}
+
+.question-text {
+  font-size: clamp(23px,3vw,32px) !important;
+  font-weight: 800;
+  line-height: 1.55 !important;
+}
+
+.answer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.answer-actions button {
+  padding: 19px 12px;
+  font-size: 17px;
+}
+
+.feedback {
+  margin: 18px 0;
+  padding: 18px;
+  background: #dff7e7;
+  color: #116239;
+  border-radius: 15px;
+  font-size: 19px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.feedback.wrong {
+  background: #fee2e2;
+  color: #a12323;
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.team {
+  padding: 20px;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 19px;
+}
+
+.team.selected {
+  border: 2px solid var(--green);
+  box-shadow: 0 0 0 4px #dcfce7;
+}
+
+.team h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.score {
+  margin: 12px 0;
+  font-size: 43px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.team small {
+  color: var(--muted);
+}
+
+.winner {
+  color: var(--green);
+  font-size: clamp(25px,4vw,40px);
+  font-weight: 800;
+  text-align: center;
+}
+
+.footer {
+  margin-right: 90px;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.footer strong {
+  color: var(--green);
+}
+
+@media(max-width:900px) {
+  main {
+    padding: 30px 100px 80px 20px;
   }
 
   .hero {
@@ -690,127 +555,87 @@ p {
   }
 
   .hero-image {
-    height: 320px;
+    min-height: 300px;
   }
 
-  .drawing-grid,
-  .result-grid {
-    grid-template-columns: 1fr;
+  .stats {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
-/* ТЕЛЕФОН */
-
-@media (max-width: 650px) {
-
-  .topbar {
-    padding: 10px;
-    gap: 8px;
+@media(max-width:600px) {
+  .header {
+    padding: 12px;
   }
 
   .brand strong {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .brand small {
     font-size: 9px;
   }
 
-  .logo {
-    width: 36px;
-    height: 36px;
-    font-size: 19px;
-  }
-
-  .header-controls {
-    width: 100%;
-    justify-content: flex-end;
+  .header-right {
     gap: 7px;
   }
 
-  .nav {
-    justify-content: flex-end;
-  }
-
-  .nav button {
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-
-  .timer-box span {
+  #phaseLabel {
     display: none;
   }
 
-  .timer-box b {
+  #clock {
     font-size: 17px;
   }
 
-  .timer-box button {
-    padding: 8px;
+  .right-panel {
+    right: 5px;
+    padding: 6px;
+    gap: 6px;
   }
 
-  #app {
-    padding: 19px 12px;
+  .rail-button {
+    width: 48px;
+    min-height: 52px;
   }
 
-  .actions,
-  .slide-controls,
-  .video-box .actions {
-    justify-content: flex-end !important;
-    gap: 8px;
+  .rail-button span {
+    font-size: 22px;
   }
 
-  .btn {
-    min-height: 45px;
-    padding: 10px 13px;
-    font-size: 13px;
+  .rail-button small {
+    font-size: 9px;
+  }
+
+  main {
+    padding: 24px 65px 80px 13px;
   }
 
   .hero h1 {
-    font-size: 51px;
+    font-size: 38px;
   }
 
-  .hero p {
-    font-size: 17px;
+  .hero-image {
+    min-height: 240px;
   }
 
-  .photo-grid {
+  .card {
+    padding: 18px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 16px;
+  }
+
+  .teams,
+  .answer-actions {
     grid-template-columns: 1fr;
   }
 
-  .photo-box {
-    height: 260px;
-  }
-
-  .count-picker {
-    gap: 7px;
-    max-width: 100%;
-  }
-
-  .count-btn {
-    font-size: 27px;
-    padding: 16px 4px;
-  }
-
-  .count-btn small {
-    font-size: 10px;
-  }
-
-  .grade-btn {
-    font-size: 15px;
-  }
-
-  .grade-buttons {
-    max-width: 100%;
+  .footer {
+    margin-right: 55px;
+    padding: 14px;
+    font-size: 9px;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
